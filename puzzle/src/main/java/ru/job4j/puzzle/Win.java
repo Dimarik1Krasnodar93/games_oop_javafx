@@ -4,12 +4,7 @@ public class Win {
     public static boolean check(int[][] board) {
 
         for (int i = 0; i < board.length; i++) {
-            if (zeroLine(board, true, i)) {
-                return true;
-            }
-        }
-        for (int j = 0; j < board[0].length; j++) {
-            if (zeroLine(board, false, j)) {
+            if (zeroLine(board, true, i) || zeroLine(board, false, i)) {
                 return true;
             }
         }
